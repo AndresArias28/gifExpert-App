@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export const GifItem = ({ title, url }) => {//desestrucutra las props(que contiene todo los atributos esparcidos)
     
   return (
@@ -6,4 +8,9 @@ export const GifItem = ({ title, url }) => {//desestrucutra las props(que contie
         <p>{title}</p>
     </div>
     )
+}
+
+GifItem.propTypes = {
+  title: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
 }

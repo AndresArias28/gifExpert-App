@@ -11,8 +11,8 @@ export const GifApp = () => {
 
   //crear funcion que agrega una categoria nueva al estado actual
   const onAddCategory = (newCategory) => {
-    if(categories.includes(newCategory) ) return;//
-    setCategories([ newCategory, ...categories ]);//agregar newCatyegoru al arreglo de categorias sin crear otro nuevo. Actualiza el estado y re-renderiza
+    if(categories.includes(newCategory) ) return;//si incluye la categoria se sale de la funcion
+    setCategories([ newCategory, ...categories ]);//agregar newCategory al arreglo de categorias sin crear otro nuevo. Actualiza el estado y re-renderiza
   }
 
   return(
@@ -20,11 +20,10 @@ export const GifApp = () => {
     <>  
       <h1>Gif Expert APP</h1>
 
-      <AddCategory addCategories={ event => onAddCategory(event) } />
+      <AddCategory addCategories={onAddCategory()} />
         {
           categories.map(( category ) => (
-            <GifGrid 
-              key={category} categoria={category} />
+            <GifGrid key={category} categoria={category} />
           ))  
         }
     </>

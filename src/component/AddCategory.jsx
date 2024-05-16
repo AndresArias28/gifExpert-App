@@ -1,5 +1,6 @@
 import { useState } from "react"
 
+
 export const AddCategory = ({addCategories}) => {//Desestrucuturacion de las props para utilizar setCategories
 
     const [inputValue, setinputValue]  = useState('');
@@ -14,13 +15,13 @@ export const AddCategory = ({addCategories}) => {//Desestrucuturacion de las pro
     const onSubmit = (event) => {
         event.preventDefault(); //Evitar que se refresca el navegador cada vez que ingreso una letra
         if( inputValue.trim().length <= 1) return; //si solo hay 1 o ningun carater se sale de la funcion para que no acurra nada
-        addCategories( inputValue.trim());//agrega categoria sin espacios
+        addCategories( inputValue.trim());//se llama la funcion addcategorias con el valor ingresado
         setinputValue('');//refresco el navegador
     }
 
   return (
 
-    <form onSubmit={(event) => onSubmit(event) }>
+    <form onSubmit={(event) => onSubmit(event) } aria-label="form" >
         <input  
             type="text" // indica caja de texto
             placeholder="buscar gif" //texto que aparece en el cuadro de texto
@@ -30,3 +31,4 @@ export const AddCategory = ({addCategories}) => {//Desestrucuturacion de las pro
     </form>
   )
 }
+
