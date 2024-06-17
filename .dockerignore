@@ -1,0 +1,13 @@
+# Exclude node_modules directory
+node_modules/
+
+# Exclude development dependencies
+.env*
+.gitignore
+
+
+
+# Exclude build artifacts (adjust based on your build process)
+build/
+dist/
+out/

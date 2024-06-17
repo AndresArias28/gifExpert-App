@@ -16,7 +16,6 @@ export const GifApp = () => {
   }
 
   return(
-      
     <>  
       <h1>Gif Expert APP</h1>
 
