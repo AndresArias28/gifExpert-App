@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { GifItem } from './GifItem';
-import { useFetchGifs } from "../hooks/useFetchGifs";
+import { useFetchGifs } from '../hooks/useFetchGifs';
 
 export const GifGrid = ({ categoria }) => {//recibe categoria en las props del componente en forma desestructurada
 

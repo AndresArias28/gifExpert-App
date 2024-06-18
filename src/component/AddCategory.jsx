@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState } from 'react'
 
 
 export const AddCategory = ({addCategories}) => {//Desestrucuturacion de las props para utilizar setCategories

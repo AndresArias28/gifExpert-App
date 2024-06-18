@@ -20,7 +20,7 @@ export const useFetchGifs = (categoria) => {
     //este hook permite realizar efectos secundarios: se ejecuta depues de que el componente se ha renderizado
     useEffect( () => {//funcion anonima que se ejecuta como efecto secundario
         getImages();//se llama solo después de que el componente se haya montado.
-    }, [] )//se defiene un arreglo para las dependecias, es decir que este hook se ejecuta sola una vez despues del renderizado del componente
+    }, [categoria] )//se defiene un arreglo para las dependecias, es decir que este hook se ejecuta sola una vez despues del renderizado del componente
     
 
   return {

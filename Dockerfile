@@ -1,17 +1,13 @@
 FROM node:alpine
-
 WORKDIR /app
 
-COPY package*.json ./
+COPY package.json ./
+COPY yarn.lock ./
 
 RUN yarn install
 
-COPY . .
+COPY . ./
 
-RUN yarn build
+EXPOSE 5173
 
-//RUN npm install -g serve
-
-EXPOSE 5000
-
-CMD ["npm", "run", "dev"]
+CMD ["npm", "run", "dev", "--", "--host"]
